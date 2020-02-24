@@ -56,5 +56,29 @@ public class Test07 {
 			for( int j =1; j<=(2*i-1);j++) System.out.print("*");
 			System.out.println();
 		}
+		
+		System.out.println("6.");
+		
+		for(int i=n; i>=0; i--) {
+			for( int j= 1; j<=n-i;j++ ) System.out.print(" ");
+			for( int j =1; j<=(2*i-1);j++) System.out.print("*");
+			System.out.println();
+		}
+		
+		System.out.println("7.");
+		int x = 4;
+		int N=2*x+1;
+		
+		for(int i= 1; i<=N; i++) {
+			if(i<=N/2+1) {
+				for( int j=1 ; j<=N/2 +1-i ; j++) System.out.print(" ");
+				for( int j=1 ; j<=(2*i-1) ; j++) System.out.print("*");
+				System.out.println();
+			} else {
+				for( int j =N/2 + 1; j<i; j++) System.out.print(" ");
+				for( int j =N/2 + 1; j<=2*(N-i)+N/2+1 ; j++) System.out.print("*");
+				System.out.println();
+			}
+		}
 	}
 }
