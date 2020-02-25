@@ -87,7 +87,6 @@ public class TopologicalSortAdjacencyList {
 				List<Edge> edges = graph.get(index);
 				if(edges!=null) {
 					for(Edge edge : edges) {
-						
 						int newDist = dist[edge.from] + edge.cost;
 						if(dist[edge.to]==null) dist[edge.to] = newDist;
 						else dist[edge.to] = Math.min(newDist, dist[edge.to]);
@@ -96,9 +95,7 @@ public class TopologicalSortAdjacencyList {
 				
 			}
 		}
-		
 		return dist;
-		
 	}
 	
 	public static void main(String[] args) {

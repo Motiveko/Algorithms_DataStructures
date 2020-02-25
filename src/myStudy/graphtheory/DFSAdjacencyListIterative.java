@@ -17,7 +17,8 @@ public class DFSAdjacencyListIterative {
 			this.cost = cost;
 		}
 	}
-
+	
+	//Start 노트부터 연결된 노드 갯수 탐색, dfs방식으로!
 	static int dfs(Map<Integer, List<Edge>> graph ,int start, int n) {
 		
 		int count =0;
@@ -67,7 +68,7 @@ public class DFSAdjacencyListIterative {
 		
 		nodeCount = dfs(graph, 4, 5);
 		System.out.println(nodeCount);
-		//메인 구현하여 테스트해보기
+
 		
 	}
 	

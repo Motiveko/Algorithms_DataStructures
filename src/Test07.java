@@ -69,16 +69,34 @@ public class Test07 {
 		int x = 4;
 		int N=2*x+1;
 		
-		for(int i= 1; i<=N; i++) {
-			if(i<=N/2+1) {
-				for( int j=1 ; j<=N/2 +1-i ; j++) System.out.print(" ");
-				for( int j=1 ; j<=(2*i-1) ; j++) System.out.print("*");
-				System.out.println();
-			} else {
-				for( int j =N/2 + 1; j<i; j++) System.out.print(" ");
-				for( int j =N/2 + 1; j<=2*(N-i)+N/2+1 ; j++) System.out.print("*");
-				System.out.println();
+		// MY code
+//		for(int i= 1; i<=N; i++) {
+//			if(i<=N/2+1) {
+//				for( int j=1 ; j<=N/2 +1-i ; j++) System.out.print(" ");
+//				for( int j=1 ; j<=(2*i-1) ; j++) System.out.print("*");
+//				System.out.println();
+//			} else {
+//				for( int j =N/2 + 1; j<i; j++) System.out.print(" ");
+//				for( int j =N/2 + 1; j<=2*(N-i)+N/2+1 ; j++) System.out.print("*");
+//				System.out.println();
+//			}
+//		}
+		
+		// Answer
+		int size = 8;
+		int c = size/2;
+		int s = -1 + (size%2);
+		for(int i=0 ; i <size ; i++) {
+			for(int j=0; j<size; j++) {
+				if(j <c +s -i || j > c+i || j<i-c || j>=size+c-i)
+					System.out.print(" ");
+				else System.out.print("*");
 			}
+			System.out.println();
 		}
+		
+
+	
+		
 	}
 }
