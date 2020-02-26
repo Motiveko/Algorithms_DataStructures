@@ -2,7 +2,7 @@ package myStudy.graphtheory;
 
 public class TopologicalSortAdjacencyMatrix {
 
-									// Matrix 가 제너릭으로 선언되었으므로 초기값은 null;
+									// Matrix 가 클래스로 선언되었으므로 초기값은 null;
 	public static int[] topologicalSort(Double[][] matrix) {
 		
 		int n = matrix.length;

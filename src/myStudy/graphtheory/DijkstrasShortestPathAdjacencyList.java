@@ -7,6 +7,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
+
+//Dijkstras :: Priority Queue 를 이용하여  negative weight edge가 없는 graph에서
+// SSSP를 bfs 방식으로 찾는 알고리듬!
 public class DijkstrasShortestPathAdjacencyList {
 
 	private final static double EPS = 1e-6;
@@ -94,7 +97,7 @@ public class DijkstrasShortestPathAdjacencyList {
 		pq.offer(new Node(start,0));
 		
 		while(!pq.isEmpty()) {
-			
+		
 			Node node = pq.poll();
 			visited[node.id] = true;
 			
@@ -114,7 +117,7 @@ public class DijkstrasShortestPathAdjacencyList {
 						prev[edge.to] = edge.from;
 					}
 					pq.offer(new Node(edge.to, dist[edge.to]));
-				}
+					}
 			}
 			//william fiset은 여기다가 return해줬는데..!
 //			if(node.id ==end) return dist[end];
