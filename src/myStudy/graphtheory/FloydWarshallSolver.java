@@ -91,43 +91,54 @@ public class FloydWarshallSolver {
 	
 	public static void main(String[] args) {
 		
-		int n = 7;
-		double[][] m = createGraph(n);
-	    m[0][1] = 2;
-	    m[0][2] = 5;
-	    m[0][6] = 10;
-	    m[1][2] = 2;
-	    m[1][4] = 11;
-	    m[2][6] = 2;
-	    m[6][5] = 11;
-	    m[4][5] = 1;
-	    m[5][4] = -2;
-	    
-	    FloydWarshallSolver solver = new FloydWarshallSolver(m);
-	    double[][] dist = solver.getApspMatrix();
-	    for(int i=0; i<n ; i++) 
-	    	for(int j=0 ; j<n; j++)
-	    		System.out.printf("This shortest path from node %d to node %d is %.2f \n",i,j,dist[i][j]);
-
-	    for(int i=0; i<n ; i++) {
-	    	String str;
-	    	for(int j=0; j<n; j++) {
-	    		List<Integer> path = solver.reconstructPath(i, j);
-	    		if(path ==null) {
-	    			str = "HAS AN ∞ NUMBER OF SOLUTIONS! (negative cycle case)";
-	    		}else if(path.size()==0) {
-	    			str = String.format("DOES NOT EXIST (node %d doesn't reach node %d)", i, j);
-	    		}else {
-	    			str = String.join(
-	    					" -> ",
-	    					path.stream().map(Object::toString).collect(java.util.stream.Collectors.toList()));
-	    			str = "is: [" + str + "]";
-	    		}
-	    		System.out.printf("The shortest path from node %d to node %d %s\n", i, j, str);
-	    	}
-	    }
-	}
+//		int n = 7;
+//		double[][] m = createGraph(n);
+//	    m[0][1] = 2;
+//	    m[0][2] = 5;
+//	    m[0][6] = 10;
+//	    m[1][2] = 2;
+//	    m[1][4] = 11;
+//	    m[2][6] = 2;
+//	    m[6][5] = 11;
+//	    m[4][5] = 1;
+//	    m[5][4] = -2;
+//	    
+//	    FloydWarshallSolver solver = new FloydWarshallSolver(m);
+//	    double[][] dist = solver.getApspMatrix();
+//	    for(int i=0; i<n ; i++) 
+//	    	for(int j=0 ; j<n; j++)
+//	    		System.out.printf("This shortest path from node %d to node %d is %.2f \n",i,j,dist[i][j]);
+//
+//	    for(int i=0; i<n ; i++) {
+//	    	String str;
+//	    	for(int j=0; j<n; j++) {
+//	    		List<Integer> path = solver.reconstructPath(i, j);
+//	    		if(path ==null) {
+//	    			str = "HAS AN ∞ NUMBER OF SOLUTIONS! (negative cycle case)";
+//	    		}else if(path.size()==0) {
+//	    			str = String.format("DOES NOT EXIST (node %d doesn't reach node %d)", i, j);
+//	    		}else {
+//	    			str = String.join(
+//	    					" -> ",
+//	    					path.stream().map(Object::toString).collect(java.util.stream.Collectors.toList()));
+//	    			str = "is: [" + str + "]";
+//	    		}
+//	    		System.out.printf("The shortest path from node %d to node %d %s\n", i, j, str);
+//	    	}
+//	    }
 	
+		int n =5;
+		double[][] m = createGraph(5);
+		m[0][3] = 1;
+		m[3][2] = 1;
+		m[2][4] = 1;
+		m[4][1] = 1;
 		
-	
+		FloydWarshallSolver solver = new FloydWarshallSolver(m);
+		
+		double[][] dist = solver.getApspMatrix();
+	    for(int i=0; i<n ; i++) 
+    	for(int j=0 ; j<n; j++)
+    		System.out.printf("This shortest path from node %d to node %d is %.2f \n",i,j,dist[i][j]);
+	}
 }
