@@ -2,6 +2,10 @@ package myStudy.graphtheory;
 
 import java.util.*;
 
+/* 위상정렬, 어떤 노드에서 갈 수 있는 노드들을 dfs로찾은 뒤 dfs역순으로 하나씩 가져와 정렬한다.
+ * 이를 통해 최단거리를 구할 수 있다.
+ * 
+ */
 public class TopologicalSortAdjacencyList {
 
 	
