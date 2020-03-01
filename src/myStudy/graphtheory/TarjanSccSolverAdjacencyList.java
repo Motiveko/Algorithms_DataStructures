@@ -10,7 +10,7 @@
  		- cycle을 찾고 low link value를 갱신하고 나면 그 cycle은 stack에서 제거, 다른 group을 dfs할 때 고려하지 않게된다.
  
  - O(V+E) , Linear
- 
+ - Bridge , Articulation Point때와 다르게 to가 visited일 때에도 low[at]과 low[to]를 비교한다.
  */
 
 package myStudy.graphtheory;
