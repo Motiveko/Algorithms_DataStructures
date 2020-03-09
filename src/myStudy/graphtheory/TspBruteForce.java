@@ -1,5 +1,11 @@
 package myStudy.graphtheory;
 
+/*
+ * TSP problem 에서는 출발하는 순서는 중요하지 않으므로 출발지점을 정해놓고 시작한다( 어차피 cycle이기때문)
+ * BruteForce 방식은 출발지점에서부터 모든 permutation을 구하고 각각의 tourCost를 계산해서 최소값을 계속해서 갱신해나간다
+ * Permutation을 구현하는 방식은 여기서는 먼저 값들을 오름차순 정렬한 후
+ * 내림차순이 될 때 까지 계속 스왑하는 방식으로 전개한다.
+ */
 public class TspBruteForce {
 
 	

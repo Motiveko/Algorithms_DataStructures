@@ -83,6 +83,7 @@ public class TarjanSccSolverAdjacencyList {
 				if(node == at) break;
 			}
 		}
+		
 	}
 	
 	private static List<List<Integer>> createEmptyGraph(int n){
@@ -157,5 +158,6 @@ public class TarjanSccSolverAdjacencyList {
 	    for (List<Integer> scc : multimap.values()) {
 	      System.out.println("Nodes: " + scc + " form a Strongly Connected Component.");
 	    }
+	    System.out.println(solver.numOfSCCs);
 	}
 }

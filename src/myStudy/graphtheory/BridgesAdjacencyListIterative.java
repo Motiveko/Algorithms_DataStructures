@@ -1,7 +1,7 @@
 package myStudy.graphtheory;
 
 import java.util.*;
-
+// CALLBACK  과정에 대한 이해가 고도로 요구된다 . 매우 생각해내기 어려운 방식쓰 ㅜㅜ 
 public class BridgesAdjacencyListIterative {
 
 	private int n, id;
