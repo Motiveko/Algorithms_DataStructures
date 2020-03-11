@@ -2,7 +2,6 @@ package myStudy.graphtheory;
 
 import java.util.*;
 
-
 /*
  * Minimum Spanning Tree(MST, 최소신장트리) 는 Graph에서 Vertex N개를
  * 최소한의 비용으로 N-1개의 Edge를 사용해서 잇는 것을 말한다
@@ -15,6 +14,7 @@ import java.util.*;
  *  
  * Lazy는 PQ를 이용, 값을 업데이트 해 주는데 O(logN) 의 complexity가 든다.
  */
+ 
 public class LazyPrimsAdjacencyList {
 
 	static class Edge implements Comparable<Edge>{

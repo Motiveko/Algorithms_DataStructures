@@ -39,7 +39,7 @@ public class MiceAndOwls {
 	    };
 	    Hole[] holes = {new Hole(1, 1, 1), new Hole(10, 2, 2), new Hole(14, 5, 1)};
 	    solve(mice, holes, /* radius= */ 3);
-	  }
+  }
 	
 	static void solve(Mouse[] mice, Hole[] holes, int radius) {
 		
