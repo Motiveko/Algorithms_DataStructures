@@ -45,7 +45,7 @@ public class HeapSort {
 	public static void main(String[] args) {
 		
 		Random ran = new Random();
-		final int N = 100000;
+		final int N = 500000;
 		int[] ar = new int[N];
 		
 		for(int i=0; i<N; i++) ar[i] = ran.nextInt(100000);
@@ -56,6 +56,7 @@ public class HeapSort {
 		
 		System.out.println(Arrays.toString(ar));
 		// About 14ms When N = 100,000, almost same as quick sort! qs = hs > ms
+		// 70ms when N =500,000
 		System.out.println("Running Time for Array Length " + N + " : " + runtime + "ms");
 	}
 }
