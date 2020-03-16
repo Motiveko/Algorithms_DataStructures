@@ -1,4 +1,4 @@
-package myStudy.algorithms.leetcode;
+package myStudy.algorithms.dp;
 
 public class MaximumSubarray {
 
