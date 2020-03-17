@@ -2,6 +2,7 @@ package myStudy.algorithms.algorithms;
 
 import java.util.*;
 
+//MED
 //9*9 matrix가 스도쿠 조건을 만족하는가?
 public class IsValidSudoku {
 

@@ -1,5 +1,6 @@
 package myStudy.algorithms.algorithms;
 
+//EASY
 public class MaximumDepthOfBinaryTree {
 
 	public static int maxDepth(Integer[] tree) {

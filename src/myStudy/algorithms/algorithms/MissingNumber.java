@@ -1,5 +1,6 @@
 package myStudy.algorithms.algorithms;
 
+//EASY
 public class MissingNumber {
 
 	//Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, 

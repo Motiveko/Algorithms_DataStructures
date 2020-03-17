@@ -1,5 +1,6 @@
 package myStudy.algorithms.algorithms;
 
+//EASY
 //Determine the number of bits required to convert integer A to integer B 
 public class ConvertIntegerAtoIntegerB {
 

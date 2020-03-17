@@ -1,5 +1,6 @@
 package myStudy.algorithms.algorithms;
 
+//EASY
 public class ReverseString {
 
 	public static String reverseString(String str) {

@@ -1,7 +1,7 @@
 package myStudy.algorithms.algorithms;
 
 import java.util.Random;
-
+//EASY
 /*
 In a row of seats, 1 represents a person sitting in that seat, 
 and 0 represents that the seat is empty. 

@@ -37,7 +37,6 @@ public class ClosestNumberInSortedArray {
 		//가져왔다!
 		return (num - ar[start]) < (ar[end] - num) ? start : end;
 	}
-	//오답이 나온다 index 가 0이거나 n-1일때 조건 수정해야한다!
 	public static void main(String[] args) {
 		int[] nums = {1, 3, 3, 4};
 		System.out.println(solve(nums,2));
