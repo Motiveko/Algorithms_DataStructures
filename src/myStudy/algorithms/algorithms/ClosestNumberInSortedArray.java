@@ -1,5 +1,8 @@
 package myStudy.algorithms.algorithms;
 
+import java.util.Arrays;
+import java.util.Random;
+
 //Given a target number and an integer array A sorted in ascending order, 
 //find the index i in A such that A[i] is closest to the given target.
 public class ClosestNumberInSortedArray {
@@ -13,29 +16,26 @@ public class ClosestNumberInSortedArray {
 		int index = -1;
 		
 		//binary search
-		while(true) {
-			if(ar[mid] > num) {
-				if(ar[mid-1] < num) {
-					index = mid;
-					break;
-				}
+		while(mid >start && mid<=end) {
+			
+			if(ar[mid] == num) return mid;
+			else if( ar[mid] > num ) {
+				if( mid-1 >=0 && ar[mid -1 ] <= num) 
+					return (ar[mid] - num) >= (num - ar[mid-1]) ? mid-1 : mid;
+				
 				end = mid;
-				mid = (start + end)/2;
-				
-			} else if( ar[mid] < num) {
-				if(ar[mid+1] >num) {
-					index = mid;
-					break;
-				}
-				
-			} else return index;
+				mid = (start + end) / 2;
+			} else {
+				if( mid + 1 <=end && ar[mid + 1] >= num) 
+					return (num - ar[mid]) >= (ar[mid + 1] - num) ? mid+1 : mid;
+					
+				start = mid;
+				mid = (start + end) / 2;
+			}
 		}
 		
-		if( ar[index] > num) {
-			return (ar[index] - num) < (num - ar[index-1]) ? index : index -1;
-		} else 
-			return (num-ar[index]) < (ar[index+1] - num) ? index : index+1; 
-
+		//가져왔다!
+		return (num - ar[start]) < (ar[end] - num) ? start : end;
 	}
 	//오답이 나온다 index 가 0이거나 n-1일때 조건 수정해야한다!
 	public static void main(String[] args) {
@@ -45,6 +45,15 @@ public class ClosestNumberInSortedArray {
 		System.out.println(solve(nums2,5));
 		int[] nums3 = {1, 2, 3};
 		System.out.println(solve(nums3,2));
+		
+		Random ran = new Random();
+		int n =600;
+		int[]nums4 = new int[n];
+		for(int i=0; i<600;i++) nums4[i] = ran.nextInt(600);
+		Arrays.sort(nums4);
+		System.out.println(Arrays.toString(nums4));
+		System.out.println(solve(nums4,619));
+		System.out.println(nums4[solve(nums4,619)]);
 	}
 
 }
