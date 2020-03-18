@@ -58,6 +58,13 @@ public abstract class SuffixArray {
 	protected abstract void construct();
 	
 	//kasai 이해 완료
+	  /*
+	   * kasai 에서 중요한건  for(i=0,len=0) 에서 i는 index값이고 k는 그보다 sa rank가 위에 있는 녀석의 index값이다
+	   * len은 비교하는 자리
+	   * sa[rank] = index <===> inv[index] = rank 관계를 이용해서
+	   * 어떤 rank inv[i] 인 index i에서 상위 rank인 inv[i] - 1 을 가지는 index k를 도출해 낸 것이다
+	   * 씨벌..
+	   */
 	private void kasai() {
 
 		lcp = new int[N];
