@@ -14,7 +14,6 @@ public class SuffixArrayMed extends SuffixArray {
 
 
 	static class SuffixRankTuple implements Comparable<SuffixRankTuple>{
-
 		int firstHalf, secondHalf, originalIndex;
 		
 		@Override
