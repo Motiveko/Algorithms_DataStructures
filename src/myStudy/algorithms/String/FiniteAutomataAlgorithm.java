@@ -7,4 +7,5 @@ package myStudy.algorithms.String;
  */
 public class FiniteAutomataAlgorithm {
 
+	//아직 이해 불가..
 }
