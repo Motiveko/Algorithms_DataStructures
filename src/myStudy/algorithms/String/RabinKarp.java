@@ -1,6 +1,10 @@
 package myStudy.algorithms.String;
 
-import java.math.BigInteger;
+/*
+ * https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/
+ * 이 글은 해싱의 방식을 10진수로 예를 들며 설명해서 이해하기 쉽다.
+ */
+
 /*
  * 참고 :: https://blog.naver.com/dinky_apple/221850206355
  * Rolling Hash :: shttps://blog.naver.com/babobigi/220911965116 
@@ -11,58 +15,65 @@ import java.math.BigInteger;
  * 
  * 알고리즘의 효율의 핵심은 해싱을 얼마나 잘 하느냐에 달려있다.(최소의 해시충돌)
  */
+
+//Fiset의 코드는 너무 어려워서 geeksforgeeks 코드를 참조함
+
 import java.util.*;
 
 public class RabinKarp {
 	
-	private static final long ALPHABET_BASE = 95 + 1;
-	private static final long[] ALPHABET = new long[127];
-	private static final BigInteger BIG_ALPHA = new BigInteger(String.valueOf(ALPHABET_BASE));
+	//d is the number of characters in the input alphabet
+	public final static int d = 256;
 	
-	private static final long[] MODS = {10_000_019, 10_000_079, 10_000_103};
-	private static final int N_HASHES = MODS.length;
-	private static final BigInteger[] BIG_MODS = new BigInteger[N_HASHES];
-	private static final long[] MOD_INVERSES = new long[N_HASHES];
-
-	public static List<Integer> rabinKarp(String text, String pattern){
+	// q : prime number
+	public static List<Integer> rabinKarp(String txt, String pat, int q){
 		
+		List<Integer> matches = new ArrayList<>();
 		
-		return null;
-	}
-	
-	
-	public static List<Integer> rabinKarpBackwards(String text, String pattren){
+		int M = pat.length();
+		int N = txt.length();
+		int i, j;
+		int p = 0; // hash value for pattern
+		int t = 0; // hash value for txt
+		int h = 1; 
 		
-		return null;
-	}
-	
-	private static long addRight(long rollingHash, char lastValue, int modIndex) {
-	    
-		rollingHash = (rollingHash * ALPHABET_BASE + ALPHABET[lastValue]) % MODS[modIndex];
-	    return (rollingHash + MODS[modIndex]) % MODS[modIndex];
-
-	}
-	
-	private static long removeRight(long rollingHash, char lastValue, int modIndex) {
+		// h-> pow(d,M-1)%q.. :: 매 회차마다 나머지 해주는 이유는 값이 2^31보다 커질 수 있기때문
+		// h = xq +y ( y는 q로나눈 나머지) 로 해서 계산해보면 결국 마지막에 나눠주나 매번 나눠주나 똑같은 것을 알 수 있다.
+		// mod q 에 대해서는 HashTable을 복습하자.
+		for( i = 0 ; i< M-1; i++) h = (h*d)%q;
 		
-		return 0;
-	}
-	
-	private static long removeLeft(
-			long rollingHash, long alphabetBasePower, char firstValue, int modIndex) {
-		
-		return 0;
-	}
-	
-	public static long[] computeHash(String str) {
-		
-		long[] rollingHashes = new long[N_HASHES];
-		for( int k = 0; k < N_HASHES; k++) {
-			for(int i=0; i < str.length(); i++)
-				rollingHashes[k] = addRight(rollingHashes[k], str.charAt(i), k);
+		//txt의 맨 처음 window에 대한 hash값, pattern의 해쉬값 구함 
+		for( i =0; i<M; i++) {
+			p = (d*p + pat.charAt(i))%q;
+			t = (d*t + txt.charAt(i))%q;
 		}
-		return rollingHashes;
+		
+		for( i = 0; i<= N-M; i++) {
+			
+			//Hash값이 같은것을 찾으면 char을 하나씩 비교해본다.
+			if(p==t) {
+				for( j =0; j<M; j++) {
+					if( txt.charAt(i+j) != pat.charAt(j))
+						break;
+				}
+				if( j == M ) matches.add(i);
+			}
+			
+			//txt의 next window에 대한 hash값을 current window의 hash값을 이용해 계산한다. O(1)
+			if( i < N-M) {
+				t = (d*(t - txt.charAt(i)*h) + txt.charAt(i+M))%q;
+				if( t< 0) t = (t + q);
+			}
+		}
+		
+		return matches;
 	}
 	
+	public static void main(String[] args) {
+		List<Integer> matches = rabinKarp("P@TTerNabcdefP@TTerNP@TTerNabcdefabcdefabcdefabcdefP@TTerN", "P@TTerN", 17);
+		System.out.println(matches.toString());
+
+	}
 	
+
 }
