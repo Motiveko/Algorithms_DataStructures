@@ -44,7 +44,6 @@ public class FiniteAutomataAlgorithm {
 			}
 		}
 	}
-	
 	private static int getNextState(char[] pat, int M, int state, int x) {
 		
 		if( state < M && x == pat[state]) return state+1;

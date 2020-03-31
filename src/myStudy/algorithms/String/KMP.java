@@ -81,7 +81,7 @@ public class KMP {
 	private static int[] kmpHelper(String pat, int m) {
 		int[] lps = new int[m];
 		
-		for( int i=1, len=0; i<m; i++) {
+		for( int i=1, len=0; i<m; ) {
 			
 			if(pat.charAt(i)==pat.charAt(len)) {
 				lps[i++] = ++len;
@@ -91,9 +91,7 @@ public class KMP {
 				if( len > 0) len = lps[len-1];
 				else i++;
 			}
-			
 		}
-		
 		
 		return lps;
 	}
