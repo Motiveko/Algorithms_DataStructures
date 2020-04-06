@@ -13,8 +13,6 @@ public class ManachersAlgorithm {
 		
 		int[] p = new int[n];
 		
-	
-		
 		for(int i=1; i<n-1; i++) {
 			//invI는 어떤 palindrome의 cente c에대해서 i의 대칭인 점 
 			int invI = 2*c - i;
@@ -29,9 +27,7 @@ public class ManachersAlgorithm {
 				r = i+p[i];
 			}
 		}
-		
 		return p;
-		
 	}
 	
 	private static char[] preProcess(char[] str) {

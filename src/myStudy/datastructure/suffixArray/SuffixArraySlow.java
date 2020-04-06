@@ -1,6 +1,5 @@
 package myStudy.datastructure.suffixArray;
 
-import java.util.Arrays;
 
 public class SuffixArraySlow extends SuffixArray {
 

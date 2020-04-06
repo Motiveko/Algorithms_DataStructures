@@ -7,7 +7,7 @@ import java.util.*;
  * 그 뒤 첫번째 랭크 비교 후 p= 2로 자신의 2번째 다음 녀석의 rank를 비교해 또 그룹화 시킨다. 없으면 -1을 넣고 최고순서로 올려준다.
  * p=4 , 8 , 16으로 늘려가며 rank 번호가 n-1까지 (n개) 비교를 계속한다.
  * p가 2의 지수승으로 증가하며 이빨빠지게 검사하는것은 이미 1,2 를 하고 나면 3번째까지 다 검증을 한 상태, 4다음 567도 검증이 된상태다.
- * 이것은 이해가 잘안되니 자꾸생각해보자
+ * 이것은 이해가 잘안되니 자꾸생각해보자 :: pos*2의 문자 하나하나를 가져오는게 아니라 그 뒤 문자열의 랭크들을 가져오기때문에 자동비교!
  */
 public class SuffixArrayMed extends SuffixArray {
 
@@ -69,7 +69,8 @@ public class SuffixArrayMed extends SuffixArray {
 				
 				if( lastRank.firstHalf != currRank.firstHalf 
 						|| lastRank.secondHalf != currRank.secondHalf) newRank++;
-				
+									// original index에 rank값들을 저장하기때문에 1,2,4,8로 비교했을 때 빈틈이없다
+									// 이 rank값이 나중에 secondHalf로 간다!
 				suffixRank[1][ranks[i].originalIndex] = newRank;
 			}
 			
@@ -91,7 +92,7 @@ public class SuffixArrayMed extends SuffixArray {
 	
 	public static void main(String[] args) {
 		
-		SuffixArrayMed sa = new SuffixArrayMed("ananabc");
+		SuffixArrayMed sa = new SuffixArrayMed("eabadeabca");
 		System.out.println(Arrays.toString(sa.getLcpArray()));
 		System.out.println(sa);
 	}
