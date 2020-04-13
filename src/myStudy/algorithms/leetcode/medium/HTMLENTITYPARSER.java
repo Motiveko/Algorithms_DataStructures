@@ -10,7 +10,6 @@ public class HTMLENTITYPARSER {
 	public static String entityParser(String text) {
 		
 		Map<String, String> map = new HashMap<>();
-		//map에다가 다 넣어주기부터!
 		map.put("quot", "\"");
 		map.put("qpos", "'");
 		map.put("amp", "&");
@@ -49,6 +48,7 @@ public class HTMLENTITYPARSER {
 		if( start !=-1) s += text.substring(start);
 		return s;
 	}
+	
 	
 	
 	public static void main(String[] args) {
