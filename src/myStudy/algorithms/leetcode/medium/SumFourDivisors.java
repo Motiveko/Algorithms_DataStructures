@@ -10,28 +10,35 @@ public class SumFourDivisors {
 
 	
 	
-	public int solution ( int[] arr) {
+	public static int solution ( int[] arr) {
 		
 		int sum = 0;
 		int count=0;
-		List<Integer> list;
+		Set<Integer> list;
 		for(int i=0; i<arr.length ; i++) {
 			
-			list = new ArrayList<>();
+			list = new HashSet<>();
 			int val = arr[i];
 			list.add(1);
 			list.add(val);
 			
 			for( int j=2; j<val; j++) {
 				if(list.contains(j)) break;
-				if(val%j ==0) list.add(val);
-				list.add(val/j);
+				if(val%j ==0) {
+					list.add(j);
+					list.add(val/j);
+				}
 			}
 			
-			if(list.size()==4) for(int divisor : list) sum+= val;
+			if(list.size()==4) for(int divisor : list) sum+= divisor;
 		}
 		
 		return sum;
+	}
+	
+	public static void main(String[] args) {
+		
+		System.out.println(solution(new int[] {21,7,4}));
 	}
 	
 }
