@@ -171,7 +171,7 @@ public class PokerDetail {
 		return yesOrNo();
 	}
 	
-	public static int yesOrNo() {
+	private static int yesOrNo() {
 		int input;
 		while(true) {
 			try {
@@ -224,10 +224,13 @@ public class PokerDetail {
 		
 		case 9:{
 			int color = gradeList.get(9)[0];
+			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 			if( color == 4) System.out.println("스페이드 로얄 스트레이트 플러쉬!");
 			else if( color == 3) System.out.println("다이아 로얄 스트레이트 플러쉬!");
 			else if( color == 2) System.out.println("하트 로얄 스트레이트 플러쉬!");
 			else System.out.println("클로버 로얄 스트레이트 플러쉬!");
+			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+
 			break;
 		}
 		case 8:{
@@ -236,19 +239,26 @@ public class PokerDetail {
 			
 			List<Integer> list = new ArrayList<>();
 			for( int i=lastNum ; i>=lastNum-5 ; i--) list.add(i);
+			
+			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 			System.out.println(list.toString());
 					
 			if( color == 4) System.out.print("스페이드  스트레이트 플러쉬!");
 			else if( color == 3) System.out.print("다이아  스트레이트 플러쉬!");
 			else if( color == 2) System.out.print("하트  스트레이트 플러쉬!");
 			else System.out.print("클로버 스트레이트 플러쉬!");			
-			
+			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+
 			break;
 		}
 		case 7:{
+			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 			int num = gradeList.get(7)[0];
 			System.out.println("[ "+num+" ]" + " 포카드!");
+			System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+
 			break;
+
 		}
 		case 6:{
 			int trpNum = gradeList.get(6)[0];
@@ -306,7 +316,7 @@ public class PokerDetail {
 		
 		
 		
-	
+		while(true) {
 			
 			System.out.println("포커 게임을 시작합니다.");
 			setCardList();
@@ -350,21 +360,9 @@ public class PokerDetail {
 			else  System.out.println("졌습니다!");
 			
 
-							
-			List<List<Integer>> cardds = new ArrayList<>();
-			for( int i=0; i<4; i++) cardds.add(new ArrayList<>());
-			cardds.get(0).add(3);
-			cardds.get(0).add(4);
-			cardds.get(0).add(6);
-			cardds.get(0).add(7);
-			cardds.get(0).add(8);
-			cardds.get(0).add(12);
-			cardds.get(2).add(9);
-			cardds.get(2).add(8);
-			
-			List<Integer[]> gradeList = getGrade(cardds);
-			showGrade(gradeList);
+			if(regame()==2) break;;
 		
-	
+		}
+		System.out.println("종료하였습니다.");
 	}
 }
