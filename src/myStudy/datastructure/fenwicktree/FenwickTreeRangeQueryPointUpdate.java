@@ -2,5 +2,5 @@ package myStudy.datastructure.fenwicktree;
 
 public class FenwickTreeRangeQueryPointUpdate {
 
-	//IMP
+		//이것의 존재의미를 알 수가 없음
 }
