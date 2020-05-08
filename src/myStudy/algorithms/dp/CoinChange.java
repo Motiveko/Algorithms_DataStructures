@@ -85,9 +85,9 @@ public class CoinChange {
 	    return (minValue != INF) ? DP[amount] = minValue : -1;
 	}
 	public static void main(String[] args) {
-		int[] coins = {2,5,1};
-		System.out.println(coinChange(coins,11));
-		System.out.println(coinChangeSpaceEfficient(coins,11));
-		System.out.println(coinChangeRecursive(coins,11));
+		int[] coins = {4,9,15};
+		System.out.println(coinChange(coins,1112));
+		System.out.println(coinChangeSpaceEfficient(coins,1112));
+		System.out.println(coinChangeRecursive(coins,1112));
 	}
 }
