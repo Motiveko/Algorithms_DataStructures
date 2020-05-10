@@ -41,7 +41,8 @@ public class Zalgorithm {
 				R--;
 			} else {
 				k = i-L;
-				//필요없는것
+				//필요없는것 -> 이 식은 논리적으로는 맞으나 Z[k] = pattern.length를 찾는데에는 의미는 없다
+				//이 else문 내의 식들을 생각할 때 pattern을 P1+P2+P1+P3 정도의 조각의 합으로 만들어서 생각해보면 된다.
 //				if(Z[k] < R-i+1	) Z[i] = Z[k];
 				
 				//Pattern P내에 k번째 substring이 Z[k]만큼 Prefix와 일치하므로 ( concat의 i번째 문자) substring 이후(현재 R이후)

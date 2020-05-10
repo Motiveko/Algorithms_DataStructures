@@ -3,7 +3,7 @@ package myStudy.algorithms.dp;
 import java.util.Arrays;
 
 public class CoinChangeRechallenge {
-	static final Integer INF = Integer.MAX_VALUE;
+	static final Integer INF = Integer.MAX_VALUE/2;
 	// Dp
 	public static int solve1(int[] coins, int target) {
 
@@ -16,12 +16,28 @@ public class CoinChangeRechallenge {
 		
 		for( int j=0; j<coins.length ; j++) {
 			for( int i = 1; i<= target; i++) {
-				if( i - coins[j] >= 0 && DP[i-coins[j]][j] != INF) DP[i][j] = DP[i-coins[j]][j] + 1;
-				if( j-1 >=0) DP[i][j] = Math.min(DP[i][j],DP[i][j-1]);
+				// 주석처리한부분으로 하면 !=INF에서 자꾸 넘어간다.. 이유가무엇일까
+//				if( i - coins[j] >= 0 && DP[i-coins[j]][j] != INF)
+//					DP[i][j] = DP[i-coins[j]][j] + 1;
+				if( i - coins[j] >= 0) {
+					int val = DP[i-coins[j]][j];
+					
+//					// val 과 DP[..] 값을 출력하면 같은게 나오는데,, 비교를해보면 9 까지는 동일한 boolean값을 출력하나 10부터 달라지기시작한다.
+//					System.out.println((val) + " , " + (DP[i-coins[j]][j]));
+//					System.out.println((val!=INF) + " , " + (DP[i-coins[j]][j] != INF) + ", " + (val==DP[i-coins[j]][j]));
+					
+					
+					if(val != INF) DP[i][j] = DP[i-coins[j]][j] + 1;
+					//바로 위의 식과 동일한데 이것도  == INF임에도 걍 넘어가버린다.. -> Integer.MAX_VALUE/2 를 하면 오류가 해결되는데.. 원인미
+//					if(DP[i-coins[j]][j] != INF) DP[i][j] = DP[i-coins[j]][j] + 1;
+				}
 				
+				
+				
+				if( j-1 >=0) DP[i][j] = Math.min(DP[i][j],DP[i][j-1]);	
 			}
 		}
-		
+		for(Integer[] d : DP) System.out.println(Arrays.toString(d));
 		return DP[target][coins.length-1] == INF ? -1 :  DP[target][coins.length-1];
 	}
 	
@@ -75,14 +91,13 @@ public class CoinChangeRechallenge {
 
 	public static void main(String[] args) {
 		
-		int[] coins1 = {1,2,5};
-		int target1 = 11;
+		int[] coins1 = {4,9,15};
+		int target1 = 1112;
 		
 		int[] coins2 = {2};
 		int target2 = 3;
-		
-		System.out.println(solve1(coins1,target1) + " = " + solve2(coins1,target1) + " = " + solve3(coins1,target1));
-		System.out.println(solve1(coins2,target2) + " = " + solve2(coins2,target2) + " = " + solve3(coins2,target2));
+		System.out.println(solve1(coins1,target1) + " = " + solve2(coins1,target1) + " = " );
+//		System.out.println(solve1(coins2,target2) + " = " + solve2(coins2,target2) + " = " + solve3(coins2,target2));
 	}
 	
 }
