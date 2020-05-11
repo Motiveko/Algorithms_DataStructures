@@ -30,10 +30,10 @@ public class Backpack4 {
 		return DP[target];
 	}
 	
+	//Git Hub Ver
 	public static int solve2(int[] nums, int target) {
 		
 		// Combination : {22233 22323 23223 23232 23322 22332 32223 32232 32322 33222}와 같이 순서를 따지는 조합이다.
-
 		/*
 		 * 돌아가는 원리
 		 * 
