@@ -94,17 +94,20 @@ public class Triangles {
 		int n = triangle.size();
 		int[][] pathSum = new int[n][n];
 		
+		int res = dfs(0,0,triangle,pathSum);
+		for( int[] layer: pathSum) System.out.println(Arrays.toString(layer));
 		
 		return dfs(0,0,triangle,pathSum); 
 		
 	}
 	
 	private static int dfs( int i , int j, List<List<Integer>> triangle ,int[][] pathSum){
-		
+		//bottom to up
+		int n= triangle.size();
 		List<Integer> layer = triangle.get(i);
-		if( i==0) pathSum[i][j] = layer.get(j);
-		if( j==0) pathSum[i][j] = pathSum[i-1][j];
+		if( i == n-1 ) return pathSum[i][j] = layer.get(j);
 		
+		pathSum[i][j] = layer.get(j) + Math.min(dfs(i+1,j,triangle,pathSum), dfs(i+1,j+1,triangle,pathSum));
 		
 		return pathSum[i][j];
 	}
@@ -131,7 +134,8 @@ public class Triangles {
 		triangle.add(layer2);
 		triangle.add(layer3);
 		
-		System.out.println(solve1(triangle));
-		System.out.println(solve2(triangle));
+//		System.out.println(solve1(triangle));
+//		System.out.println(solve2(triangle));
+		System.out.println(solve3(triangle));
 	}
 }
