@@ -32,14 +32,13 @@ public class LongestCommonSubsequence2 {
 	
 	// dfs + recursive 방식!
 	
-	static Integer res = 0;
 	static Integer count = 0;
+	static Integer res = 0;
 	
 	public static int solve1( int[][] matrix) {
 		
 		int m = matrix.length;
 		int n = matrix[0].length;
-		
 		int[][] dp = new int[m][n];
 		boolean[][] visited = new boolean[m][n];
 		
@@ -56,29 +55,31 @@ public class LongestCommonSubsequence2 {
 
 	
 	private static void dfs( int[][] dp, int[][] matrix, int i, int j, boolean[][] visited ) {
+		
 		count++;
+
 		visited[i][j] = true;
 		if( i-1 >= 0 && matrix[i][j] < matrix[i-1][j]) {
 			dp[i-1][j] = Math.max(dp[i-1][j], dp[i][j] + 1);
-			res = dp[i-1][j];
+			res = Math.max(dp[i-1][j],res);
 			dfs(dp,matrix,i-1,j,visited);
 		}
 		if( j-1 >= 0 && matrix[i][j] < matrix[i][ j-1]) {
 			dp[i][j-1] = Math.max(dp[i][j-1], dp[i][j] + 1);
-			res = dp[i][j-1];
+			res = Math.max(dp[i][j-1],res);
 			dfs(dp,matrix,i,j-1,visited);
 		}
 		if( i+1 < matrix.length && matrix[i][j] < matrix[i+1][j]) {
 			dp[i+1][j] = Math.max(dp[i+1][j], dp[i][j] + 1);
-			res = dp[i+1][j];
+			res = Math.max(dp[i+1][j],res);
 			dfs(dp,matrix,i+1,j,visited);
 		}
 		if( j+1 < matrix[0].length && matrix[i][j] < matrix[i][j+1]) {
 			dp[i][j+1] = Math.max(dp[i][j+1], dp[i][j] + 1);
-			res = dp[i][j+1];
+			res = Math.max(dp[i][j+1],res);
 			dfs(dp,matrix,i,j+1,visited);
 		}
-		
+
 	}
 	
 	public static void main(String[] args) {
