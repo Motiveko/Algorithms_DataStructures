@@ -32,34 +32,68 @@ public class LongestCommonSubsequence2 {
 	
 	// dfs + recursive 방식!
 	
+	static Integer res = 0;
+	static Integer count = 0;
+	
 	public static int solve1( int[][] matrix) {
 		
 		int m = matrix.length;
 		int n = matrix[0].length;
 		
 		int[][] dp = new int[m][n];
-		Set<Integer> visited = new HashSet<>();
-		int res = 0;
+		boolean[][] visited = new boolean[m][n];
 		
+
 		for( int i=0; i<m; i++) {
 			for( int j=0; j<n; j++) {
-				int curr = j + i*n;
-				if(!visited.contains(curr)) dfs(dp,i,j,visited,res , curr);
+				if(!visited[i][j]) dfs(dp, matrix, i, j, visited);
 			}
 		}
-		
-		return res;
+		System.out.println("count : " + count);
+		for( int i=0; i<m; i++) System.out.println(Arrays.toString(dp[i]));
+		return res+1;
 	}
 
 	
-	private static void dfs( int[][] dp, int i, int j, Set<Integer> visited , int res, int curr) {
-		
-		visited.add(curr);
-		
+	private static void dfs( int[][] dp, int[][] matrix, int i, int j, boolean[][] visited ) {
+		count++;
+		visited[i][j] = true;
+		if( i-1 >= 0 && matrix[i][j] < matrix[i-1][j]) {
+			dp[i-1][j] = Math.max(dp[i-1][j], dp[i][j] + 1);
+			res = dp[i-1][j];
+			dfs(dp,matrix,i-1,j,visited);
+		}
+		if( j-1 >= 0 && matrix[i][j] < matrix[i][ j-1]) {
+			dp[i][j-1] = Math.max(dp[i][j-1], dp[i][j] + 1);
+			res = dp[i][j-1];
+			dfs(dp,matrix,i,j-1,visited);
+		}
+		if( i+1 < matrix.length && matrix[i][j] < matrix[i+1][j]) {
+			dp[i+1][j] = Math.max(dp[i+1][j], dp[i][j] + 1);
+			res = dp[i+1][j];
+			dfs(dp,matrix,i+1,j,visited);
+		}
+		if( j+1 < matrix[0].length && matrix[i][j] < matrix[i][j+1]) {
+			dp[i][j+1] = Math.max(dp[i][j+1], dp[i][j] + 1);
+			res = dp[i][j+1];
+			dfs(dp,matrix,i,j+1,visited);
+		}
 		
 	}
 	
-	
+	public static void main(String[] args) {
+				
+		int[][] matrix = new int[5][5];
+		
+		matrix[0] = new int[] {1,2,3,4,5};
+		matrix[1] = new int[] {16,17,24,23,6};
+		matrix[2] = new int[] {15,18,25,22,7};
+		matrix[3] = new int[] {14,19,20,21,8};
+		matrix[4] = new int[] {13,12,11,10,9};
+		
+		System.out.println(solve1(matrix));
+
+	}
 	
 	
 	
