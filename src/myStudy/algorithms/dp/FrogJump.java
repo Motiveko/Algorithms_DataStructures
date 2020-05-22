@@ -80,7 +80,8 @@ public class FrogJump {
 	public static boolean solve2(int[] stones) {
 	
 		// How to solve it with dp..!
-	
+		// DP 로 풀려면 어떤 상태와 그 상태에 대한 저장값이 있어야 하는데 여기서는 상태는 stone, 저장값은 그 stone에 도달할 때 점프한 점프거리값이다!
+		
 				// Key: stone, value: 그 stone에 도달할 때 점프한 거리
 		HashMap< Integer, Set<Integer>> dp = new HashMap<>();
 		
