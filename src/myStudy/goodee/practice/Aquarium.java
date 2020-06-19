@@ -39,6 +39,8 @@ abstract class Fish{
 		if(isFeedable && date>0) {			
 			date--;
 			isFeedable = false;
+			isFeedable = false;
+			
 			return true;
 		} 
 		return false;

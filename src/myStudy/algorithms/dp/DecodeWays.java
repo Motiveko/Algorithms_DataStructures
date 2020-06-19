@@ -17,12 +17,9 @@ The number of ways decoding "12" is 2.
 */
 
 public class DecodeWays {
-
-	
 	
 	public static int solve1( String s) {
-		
-		
+				
 		//5123 abc lc aw   11111 aaaa 
 		// 111 aaa ka
 		int n = s.length();
@@ -30,19 +27,7 @@ public class DecodeWays {
 		int[] dp = new int[n];
 		Arrays.fill(dp, 1);
 		
-		if( s.charAt(0)=='1' || (s.charAt(0)=='2' && s.charAt(1) >= '0' && s.charAt(1)<='6')) 
-			dp[0] = 2;
-		
-		for( int i=1; i<n; i++) {
-			dp[i] = dp[i-1];
-			if( s.charAt(i) == '1' && i<n-1) {
-				dp[i] *= 2;
-			} else if(  s.charAt(i) == '2' && i<n-1 && s.charAt(1) >= '0' && s.charAt(1)<='6') {
-				dp[i] *= 2;
-			}
-		}
-		
-		
+
 		
 		return dp[n-1];
 	}
