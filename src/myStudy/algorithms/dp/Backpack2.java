@@ -28,7 +28,7 @@ public class Backpack2 {
 		 * DP가 value값이 된다.
 		 */
 		
-		
+		//test
 		int[][] DP = new int[size + 1][volumes.length];
 		for( int[] d : DP) Arrays.fill(d, -1);
 		Arrays.fill(DP[0], 0);
