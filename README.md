@@ -12,7 +12,7 @@
    
 ## 학습내용
 
-  #### Algorithms
+  ### Algorithms
    #####  String
    * [FiniteAutomataAlgorithm](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/FiniteAutomataAlgorithm.java)
    * [FiniteAutomataAlgorithmEfficiency](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/FiniteAutomataAlgorithmEfficiency.java)
