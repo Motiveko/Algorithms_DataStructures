@@ -12,12 +12,12 @@
 
   #### Algorithms
    ##### String
-    * [FiniteAutomataAlgorithm](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/FiniteAutomataAlgorithm.java)
-    * [FiniteAutomataAlgorithmEfficiency](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/FiniteAutomataAlgorithmEfficiency.java)
-    * [KMP](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/KMP.java)
-    * [ManachersAlgorithm](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/ManachersAlgorithm.java)
-    * [RabinKarp](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/RabinKarp.java)
-    * [Zalgorithm](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/Zalgorithm.java)
+   * [FiniteAutomataAlgorithm](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/FiniteAutomataAlgorithm.java)
+   * [FiniteAutomataAlgorithmEfficiency](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/FiniteAutomataAlgorithmEfficiency.java)
+   * [KMP](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/KMP.java)
+   * [ManachersAlgorithm](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/ManachersAlgorithm.java)
+   * [RabinKarp](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/RabinKarp.java)
+   * [Zalgorithm](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/Zalgorithm.java)
    
  
  
