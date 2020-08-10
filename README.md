@@ -11,7 +11,7 @@
 ### 학습내용
 
   #### Algorithms
-   ##### String
+   #####  String
    * [FiniteAutomataAlgorithm](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/FiniteAutomataAlgorithm.java)
    * [FiniteAutomataAlgorithmEfficiency](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/FiniteAutomataAlgorithmEfficiency.java)
    * [KMP](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/KMP.java)
