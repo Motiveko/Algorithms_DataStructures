@@ -19,7 +19,17 @@
    * [RabinKarp](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/RabinKarp.java)
    * [Zalgorithm](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/String/Zalgorithm.java)
    
- 
+   ##### Sorting
+   * [BubbleSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/BubbleSort.java)
+   * [BucketSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/BucketSort.java)
+   * [CountingSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/CountingSort.java)
+   * [HeapSort] (https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/HeapSort.java)
+   * [InsertionSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/InsertionSort.java)
+   * [MergeSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/MergeSort.java)
+   * [QuickSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/QuickSort.java)
+   *[SelectionSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/SelectionSort.java)
+   
+   
  
   ### DataStructure
  
