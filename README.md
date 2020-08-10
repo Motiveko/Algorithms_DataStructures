@@ -1,14 +1,16 @@
 # Java를 이용한 Algorithms & dataStructure 학습입니다.
 
 
-### 참고한 자료
+## 참고한 자료
   * [Data Structures Easy to Advanced Course - Full Tutorial from a Google Engineer](https://www.youtube.com/watch?v=RBSGKlAvoiM)
   * [Algorithms Course - Graph Theory Tutorial from a Google Engineer](https://www.youtube.com/watch?v=09_LlHjoEiY)
   * [fishercoder1534/Leetcode](https://github.com/fishercoder1534/Leetcode)
   * [geeksforgeeks](https://www.geeksforgeeks.org)
   
+  
+  
    
-### 학습내용
+## 학습내용
 
   #### Algorithms
    #####  String
@@ -55,13 +57,45 @@
    * [TspDynamicProgrammingIterative](https://github.com/Motiveko/Study/blob/master/src/myStudy/graphtheory/TspDynamicProgrammingIterative.java)
    * [TspDynamicProgrammingRecursive](https://github.com/Motiveko/Study/blob/master/src/myStudy/graphtheory/TspDynamicProgrammingRecursive.java)
    
+   ##### Search
+   * [BinarySearch](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/serch/BinarySearch.java)
+   * [InterplationSearch](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/serch/InterpolationSearch.java)
+   * [TernarySearch](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/serch/TernarySearch.java)
    
    
+   ##### Othrers
+   * [Permutations](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/other/Permutations.java)
+ 
+   
+   
+   ###### GraphThory
+   * [Graph](https://github.com/Motiveko/Study/blob/master/src/myStudy/graph/Graph.java)
+   * [GraphWithMatrix](https://github.com/Motiveko/Study/blob/master/src/myStudy/graph/GraphWithMatrix.java)
+   * [UndGraphWithList](https://github.com/Motiveko/Study/blob/master/src/myStudy/graph/UndGraphWithList.java)
+   * [WghDirGraph](https://github.com/Motiveko/Study/blob/master/src/myStudy/graph/WghDirGraph.java)
+  
+ 
  
   ### DataStructure
- 
+  
+  * [Binary Search Tree](https://github.com/Motiveko/Study/tree/master/src/myStudy/datastructure/binarysearchtree)
+  * [Fenwick Tree](https://github.com/Motiveko/Study/tree/master/src/myStudy/datastructure/fenwicktree)
+  * [HashTable](https://github.com/Motiveko/Study/tree/master/src/myStudy/datastructure/hashtable)
+  * [Priority Queue](https://github.com/Motiveko/Study/tree/master/src/myStudy/datastructure/priorityQueue)
+  * [Segment Tree](https://github.com/Motiveko/Study/tree/master/src/myStudy/datastructure/segmenttree)
+  * [Suffix Array](https://github.com/Motiveko/Study/tree/master/src/myStudy/datastructure/suffixArray)
  
  
   ### LeetCode
+  
+  
+   ##### LeetCode Easy-Med-Hard
+   * [LeetCode Easy](https://github.com/Motiveko/Study/tree/master/src/myStudy/algorithms/leetcode/easy)
+   * [LeetCode Medium](https://github.com/Motiveko/Study/tree/master/src/myStudy/algorithms/leetcode/medium)
+   
+   
+   ##### Dynamic Programming
+   * [DP](https://github.com/Motiveko/Study/tree/master/src/myStudy/algorithms/dp)
+   
  
  
