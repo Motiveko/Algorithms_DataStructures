@@ -1,5 +1,7 @@
 package myStudy.algorithms.kakao.stackQueue;
 
+//카카오 코딩테스트 연습, 큐/스택 1번문제
+// https://www.welcomekakao.com/learn/courses/30/lessons/42584?language=java
 import java.util.Stack;
 
 public class StockPrice {

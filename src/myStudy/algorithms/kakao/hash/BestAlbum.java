@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
+// 카카오 코딩테스트 연습, 해쉬 4번문제
+// https://www.welcomekakao.com/learn/courses/30/lessons/42579
 public class BestAlbum {
 	static class Solution {
 	    public static int[] solution(String[] genres, int[] plays) {
@@ -64,11 +66,8 @@ public class BestAlbum {
 	    			}
 	    		}
 	    	}
-	    	int[] a = new int[answer.size()];
-	    	for( int i =0; i<a.length;i++) {
-	    		a[i] = answer.get(i);
-	    	}
-	    	return a;
+
+	    	return answer.stream().mapToInt(Integer::intValue).toArray();
 	    }
 	}
 	
