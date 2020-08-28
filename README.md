@@ -97,7 +97,7 @@
    ##### Dynamic Programming
    * [DP](https://github.com/Motiveko/Study/tree/master/src/myStudy/algorithms/dp)
    
-  ### Programmers 코딩테스트 연습
+  ### Programmers 코딩테스트 연습문제
    * [Hash](https://github.com/Motiveko/Study/tree/master/src/myStudy/algorithms/kakao/hash)
    * [Stack,Queue](https://github.com/Motiveko/Study/tree/master/src/myStudy/algorithms/kakao/stackQueue)
    * [Heap](https://github.com/Motiveko/Study/tree/master/src/myStudy/algorithms/kakao/heap)
