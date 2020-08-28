@@ -29,7 +29,7 @@
    * [InsertionSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/InsertionSort.java)
    * [MergeSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/MergeSort.java)
    * [QuickSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/QuickSort.java)
-   *[SelectionSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/SelectionSort.java)
+   * [SelectionSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/SelectionSort.java)
    
    ##### GraphThory
    * [ArticulationPointsAdjacencyList](https://github.com/Motiveko/Study/blob/master/src/myStudy/graphtheory/ArticulationPointsAdjacencyList.java)
