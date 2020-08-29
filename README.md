@@ -10,7 +10,7 @@
   
   
    
-## 학습내용
+## DataStructure와 Algorithms 이론 구현
 
   ### Algorithms
    #####  String
@@ -29,7 +29,7 @@
    * [InsertionSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/InsertionSort.java)
    * [MergeSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/MergeSort.java)
    * [QuickSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/QuickSort.java)
-   *[SelectionSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/SelectionSort.java)
+   * [SelectionSort](https://github.com/Motiveko/Study/blob/master/src/myStudy/algorithms/sorting/SelectionSort.java)
    
    ##### GraphThory
    * [ArticulationPointsAdjacencyList](https://github.com/Motiveko/Study/blob/master/src/myStudy/graphtheory/ArticulationPointsAdjacencyList.java)
@@ -86,8 +86,10 @@
   * [Suffix Array](https://github.com/Motiveko/Study/tree/master/src/myStudy/datastructure/suffixArray)
  
  
-  ### LeetCode
-  
+ 
+ 
+ 
+ ## 각종 문제풀이  
   
    ##### LeetCode Easy-Med-Hard
    * [LeetCode Easy](https://github.com/Motiveko/Study/tree/master/src/myStudy/algorithms/leetcode/easy)
@@ -97,5 +99,11 @@
    ##### Dynamic Programming
    * [DP](https://github.com/Motiveko/Study/tree/master/src/myStudy/algorithms/dp)
    
+  ### Programmers 코딩테스트 연습문제
+   * [Hash](https://github.com/Motiveko/Study/tree/master/src/myStudy/algorithms/kakao/hash)
+   * [Stack,Queue](https://github.com/Motiveko/Study/tree/master/src/myStudy/algorithms/kakao/stackQueue)
+   * [Heap](https://github.com/Motiveko/Study/tree/master/src/myStudy/algorithms/kakao/heap)
+
+ 
  
  
